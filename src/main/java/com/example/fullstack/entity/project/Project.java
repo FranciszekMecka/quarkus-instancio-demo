@@ -26,15 +26,15 @@ public class Project {
     private long id;
 
     @Column(nullable = false)
-    public String name;
+    private String name;
 
     @ManyToOne(optional = false)
-    public User user;
+    private User user;
 
     @CreationTimestamp
     @Column(updatable = false, nullable = false)
-    public ZonedDateTime created;
+    private ZonedDateTime created;
 
     @Version
-    public int version;
+    private int version;
 }

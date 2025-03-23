@@ -24,10 +24,10 @@ public class User {
     private String name;
 
     @Column(nullable = false)
-    String password;
+    private String password;
 
     @Version
-    public int version;
+    private  int version;
 
     @CreationTimestamp
     @Column(updatable = false, nullable = false)
@@ -35,6 +35,6 @@ public class User {
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "id"))
-    public List<String> roles;
+    private List<String> roles;
 
 }

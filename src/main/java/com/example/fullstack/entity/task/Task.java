@@ -22,25 +22,25 @@ public class Task {
     private long id;
 
     @Column(nullable = false)
-    public String title;
+    private String title;
 
     @Column(length = 1000)
-    public String description;
+    private String description;
 
-    public Integer priority;
+    private Integer priority;
 
     @ManyToOne(optional = false)
-    public User user;
+    private User user;
 
-    public ZonedDateTime complete;
+    private ZonedDateTime complete;
 
     @ManyToOne
-    public Project project;
+    private Project project;
 
     @CreationTimestamp
     @Column(updatable = false, nullable = false)
-    public ZonedDateTime created;
+    private ZonedDateTime created;
 
     @Version
-    public int version;
+    private int version;
 }
